@@ -1,0 +1,219 @@
+.form-page-section {
+  background: #f5f7f3;
+}
+
+.form-layout {
+  display: grid;
+  align-items: start;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 35px;
+}
+
+.form-layout > * {
+  min-width: 0;
+}
+
+.large-form {
+  min-width: 0;
+  padding: 38px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--paper);
+  box-shadow: 0 10px 40px rgba(25, 68, 59, 0.07);
+}
+
+.large-form fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 0 0 34px;
+  border: 0;
+}
+
+.large-form fieldset + fieldset {
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+
+.large-form legend {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 25px;
+  color: var(--ink);
+  font-family: Georgia, serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+
+.large-form legend span {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--green);
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 0.8rem;
+}
+
+.photo-upload-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.photo-upload {
+  position: relative;
+  display: flex !important;
+  width: 100%;
+  min-width: 0;
+  min-height: 145px;
+  overflow: hidden;
+  align-items: center !important;
+  justify-content: center;
+  border: 2px dashed #bfd0c9;
+  border-radius: 16px;
+  background: #f7faf8;
+  color: var(--green);
+  cursor: pointer;
+  flex-direction: column !important;
+  text-align: center;
+  transition: border 160ms ease, background 160ms ease;
+}
+
+.photo-upload:hover,
+.photo-upload.has-file {
+  border-color: var(--green);
+}
+
+.photo-upload:hover {
+  background: var(--green-light);
+}
+
+.photo-upload.has-file {
+  min-height: 190px;
+  padding: 0;
+  border-style: solid;
+  background: #eef3f0;
+}
+
+.photo-upload input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.photo-upload-empty {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  justify-content: center;
+  color: var(--green);
+  flex-direction: column;
+  gap: 7px;
+}
+
+.photo-upload-empty strong {
+  color: var(--ink);
+  font-size: 0.8rem;
+}
+
+.photo-upload-empty small {
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.photo-upload-preview {
+  width: 100%;
+  height: 190px;
+  display: block;
+  object-fit: cover;
+  background: #e8eeeb;
+}
+
+.photo-upload-change {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--green-dark);
+  font-size: 0.7rem;
+  font-weight: 800;
+  gap: 5px;
+  box-shadow: 0 3px 12px rgba(25, 68, 59, 0.12);
+}
+
+.photo-upload-name {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  left: 8px;
+  overflow: hidden;
+  padding: 7px 9px;
+  border-radius: 9px;
+  background: rgba(12, 48, 40, 0.78);
+  color: white;
+  font-size: 0.68rem;
+  font-weight: 650;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.consent-field {
+  margin: 5px 0 22px;
+}
+
+.form-aside {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.aside-card {
+  padding: 28px;
+  border-radius: var(--radius-md);
+  background: var(--green-dark);
+  color: white;
+}
+
+.aside-card h3 {
+  margin: 18px 0 14px;
+  color: white;
+}
+
+.aside-card ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #c4dbd4;
+  line-height: 2;
+}
+
+.aside-icon {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.aside-card-soft {
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.aside-card-soft h3 {
+  color: var(--ink);
+}

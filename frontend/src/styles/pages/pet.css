@@ -1,0 +1,157 @@
+.pet-detail-section {
+  background: #f5f7f3;
+}
+
+.back-link {
+  margin-bottom: 25px;
+}
+
+.pet-detail-grid {
+  display: grid;
+  align-items: start;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 42px;
+}
+
+.pet-main-photo {
+  width: 100%;
+  height: 560px;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  background: #e8eeeb;
+  box-shadow: var(--shadow);
+}
+
+.pet-thumbnails {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.pet-thumbnails button {
+  width: 92px;
+  height: 75px;
+  overflow: hidden;
+  padding: 3px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background: white;
+  cursor: pointer;
+}
+
+.pet-thumbnails button.active {
+  border-color: var(--warm);
+}
+
+.pet-thumbnails img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  background: #e8eeeb;
+}
+
+.pet-detail-card {
+  padding: 38px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.pet-detail-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.pet-detail-topline > div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pet-detail-topline > span:last-child {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.pet-detail-card h1 {
+  margin: 25px 0 12px;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1.1;
+}
+
+.pet-detail-description {
+  margin: 0 0 18px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.detail-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-list > div,
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid #e7ece9;
+}
+
+.detail-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  place-items: center;
+  border-radius: 13px;
+  background: var(--green-light);
+  color: var(--green);
+}
+
+.detail-list small,
+.detail-list strong,
+.contact-row small,
+.contact-row strong {
+  display: block;
+}
+
+.detail-list small,
+.contact-row small {
+  margin-bottom: 3px;
+  color: var(--muted);
+}
+
+.contact-box {
+  margin-top: 28px;
+  padding: 24px;
+  border-radius: var(--radius-md);
+  background: #edf4f0;
+}
+
+.contact-box h2 {
+  margin-bottom: 16px;
+  font-size: 1.35rem;
+}
+
+.contact-box .button + .button {
+  margin-top: 10px;
+}
+
+.found-action {
+  margin-top: 14px;
+}
+
+.safety-note {
+  margin: 20px 0 0;
+  color: #7b8e89;
+  font-size: 0.78rem;
+}

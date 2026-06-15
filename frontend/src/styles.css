@@ -1,0 +1,18 @@
+/* Импорт стилей CSS для всего проекта */
+
+@import './styles/variables.css';
+@import './styles/base.css';
+@import './styles/ui.css';
+@import './styles/layout.css';
+@import './styles/modal.css';
+
+@import './styles/pages/home.css';
+@import './styles/pages/search.css';
+@import './styles/pages/pet.css';
+@import './styles/pages/add-pet.css';
+@import './styles/pages/profile.css';
+@import './styles/pages/admin.css';
+@import './styles/pages/auth.css';
+@import './styles/pages/not-found.css';
+
+@import './styles/adaptive.css';

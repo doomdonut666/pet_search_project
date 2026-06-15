@@ -1,0 +1,28 @@
+.not-found-page {
+  display: flex;
+  min-height: 70vh;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 20px;
+  background: linear-gradient(145deg, #edf4f0, #f8eee4);
+  flex-direction: column;
+  text-align: center;
+}
+
+.not-found-page > span {
+  color: var(--green);
+  font-family: Georgia, serif;
+  font-size: 7rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.not-found-page h1 {
+  margin: 15px 0 10px;
+  font-size: 2.6rem;
+}
+
+.not-found-mark {
+  color: var(--warm);
+  transform: rotate(-12deg);
+}

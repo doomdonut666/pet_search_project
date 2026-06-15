@@ -1,0 +1,65 @@
+from django.urls import path
+
+from .views import (
+    AdminOrderListView,
+    AdminOrderManageView,
+    DistrictListView,
+    KindListView,
+    OrderCreateView,
+    OrderFoundView,
+    PetDetailEditView,
+    PetListView,
+    QuickSearchView,
+    SearchView,
+    SliderView,
+    SubscriptionView,
+    UserOrderDeleteView,
+    UserOrderListView,
+)
+
+
+# В ТЗ встречаются адреса как со слешем в конце, так и без него.
+urlpatterns = [
+    path('pets', PetListView.as_view(), name='pet-list-no-slash'),
+    path('pets/', PetListView.as_view(), name='pet-list'),
+    path('pets/slider', SliderView.as_view(), name='pet-slider-no-slash'),
+    path('pets/slider/', SliderView.as_view(), name='pet-slider'),
+    path('pets/new', OrderCreateView.as_view(), name='order-create-no-slash'),
+    path('pets/new/', OrderCreateView.as_view(), name='order-create'),
+    path('pets/<int:pk>/found', OrderFoundView.as_view(), name='order-found-no-slash'),
+    path('pets/<int:pk>/found/', OrderFoundView.as_view(), name='order-found'),
+    path('pets/<int:pk>', PetDetailEditView.as_view(), name='pet-detail-no-slash'),
+    path('pets/<int:pk>/', PetDetailEditView.as_view(), name='pet-detail'),
+    path('kinds', KindListView.as_view(), name='kind-list-no-slash'),
+    path('kinds/', KindListView.as_view(), name='kind-list'),
+    path('districts', DistrictListView.as_view(), name='district-list-no-slash'),
+    path('districts/', DistrictListView.as_view(), name='district-list'),
+    path('search', QuickSearchView.as_view(), name='quick-search'),
+    path('search/', SearchView.as_view(), name='order-search'),
+    path('subscription', SubscriptionView.as_view(), name='subscription-no-slash'),
+    path('subscription/', SubscriptionView.as_view(), name='subscription'),
+    path('users/orders', UserOrderListView.as_view(), name='user-orders-no-slash'),
+    path('users/orders/', UserOrderListView.as_view(), name='user-orders'),
+    path(
+        'users/orders/<int:pk>',
+        UserOrderDeleteView.as_view(),
+        name='user-order-delete-no-slash',
+    ),
+    path(
+        'users/orders/<int:pk>/',
+        UserOrderDeleteView.as_view(),
+        name='user-order-delete',
+    ),
+    path('admin/orders', AdminOrderListView.as_view(), name='admin-orders'),
+    path('admin/orders/', AdminOrderListView.as_view(), name='admin-orders-slash'),
+    path(
+        'admin/orders/<int:pk>',
+        AdminOrderManageView.as_view(),
+        name='admin-order-manage',
+    ),
+    path(
+        'admin/orders/<int:pk>/',
+        AdminOrderManageView.as_view(),
+        name='admin-order-manage-slash',
+    ),
+]
