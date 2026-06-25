@@ -17,8 +17,6 @@ from .views import (
     UserOrderListView,
 )
 
-
-# В ТЗ встречаются адреса как со слешем в конце, так и без него.
 urlpatterns = [
     path('pets', PetListView.as_view(), name='pet-list-no-slash'),
     path('pets/', PetListView.as_view(), name='pet-list'),
